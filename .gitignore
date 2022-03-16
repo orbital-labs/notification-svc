@@ -1,0 +1,5 @@
+.env
+/docs
+# Binary file
+notification-svc
+*.exe
