@@ -29,6 +29,11 @@ type RabbitMQOption struct {
 	Exclusive    bool
 }
 
+// MessengerInterface for publish
+type MessengerInterface interface {
+	Publish([]byte) error
+}
+
 func NewRabbitMQPublisher(opt RabbitMQOption) *RabbitMQ {
 	url := opt.RabbitMQURL
 	cli := cony.NewClient(
